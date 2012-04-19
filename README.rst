@@ -8,3 +8,5 @@ Transformaciones de Schwarz Cristoffel
 _______________________________________
 Módulo conforme
 ===============
+Método convencional
+___________________
