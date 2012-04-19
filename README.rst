@@ -11,4 +11,3 @@ Módulo conforme
 Método convencional
 ___________________
 Problema de la membrana circular
-................................
