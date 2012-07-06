@@ -1,4 +1,4 @@
-Transformaciones Conformes
+﻿Transformaciones Conformes
 ________________________
 Teorema de la aplicaci�n conforme de Riemman,
 =============================================
@@ -11,3 +11,5 @@ Módulo conforme
 Método convencional
 ___________________
 Problema de la membrana circular
+
+Ejercicio
