@@ -1,123 +1,102 @@
-
 \documentclass[a4paper,spanish]{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{babel}
+\usepackage[latin9]{inputenc}
+\pagestyle{empty}
+\usepackage{float}
+\usepackage{graphicx}
 
-%TCIDATA{OutputFilter=LATEX.DLL}
-%TCIDATA{Version=5.50.0.2953}
-%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
-%TCIDATA{BibliographyScheme=Manual}
-%TCIDATA{Created=Monday, September 10, 2007 11:32:14}
-%TCIDATA{LastRevised=Thursday, May 17, 2012 08:03:24}
-%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
-%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
-%TCIDATA{CSTFile=LaTeX article.cst}
-%TCIDATA{PageSetup=0,0,0,0,0}
-%TCIDATA{Counters=alph,3}
-%TCIDATA{AllPages=
-%H=0
-%F=0
-%}
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
 
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{acknowledgement}[theorem]{Acknowledgement}
-\newtheorem{algorithm}[theorem]{Algorithm}
-\newtheorem{axiom}[theorem]{Axiom}
-\newtheorem{case}[theorem]{Case}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{conclusion}[theorem]{Conclusion}
-\newtheorem{condition}[theorem]{Condition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{criterion}[theorem]{Criterion}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{solution}[theorem]{Solution}
-\newtheorem{summary}[theorem]{Summary}
-\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\pagestyle{empty}
 \topmargin=-3.5cm
 \oddsidemargin=0cm
 \textwidth=16.5cm
 \textheight=27.6cm
-\pagestyle{empty}
-\input{tcilatex}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
 \begin{document}
 
-\title{\textbf{Implementaci\'{o}n de una transformaci\'{o}n asociada a un
-homeomorfismo entre una regi\'{o}n plana simplemente conexa y el disco
-unitario abierto}\\
-Geometr\'{\i}a}
-\author{Antonio S\'{a}ngari, Cristina Eg\"{u}ez \\
-%EndAName
-Departamento de Matem\'{a}tica, Facultad de Ciencias Exactas. \\
-Universidad Nacional de Salta}
+\title{\textbf{Implementación de una transformación asociada a un homeomorfismo
+entre una región plana simplemente conexa y el disco unitario abierto}\\
+ Geometría}
+
+
+\author{Antonio Sángari, Cristina Egüez \\
+
+Departamento de Matemática, Facultad de Ciencias Exactas. \\
+ Universidad Nacional de Salta}
+
 \maketitle
+Construimos una transformación biyectiva conforme que convierte regiones
+$\Omega$ simplemente convexas del plano (distintas del mismo plano)
+en el círculo unitario abierto $U$, y recíprocamente. En este trabajo
+consideramos dominios incluidos en el círculo unitario que contienen
+el origen y cuya frontera corta solamente una vez los rayos desde
+el origen. Para ello usamos el esquema de la demostración del Teorema
+de Riemann para transformaciones conformes, realizada por Koebe, que
+consiste en la construcción iterativa de regiones $\Omega_{1},$$\Omega_{2},\dots$,
+a partir de la región $\Omega_{0}=\Omega\subset U$, generadas por
+una sucesión de funciones $f_{1},f_{2},\dots$, de modo que $f_{i}\left(\Omega_{i-1}\right)=\Omega_{i}$,
+y $f_{n}\circ f_{n-1}\circ\cdots\circ f_{1}$ converja a una transformación
+conforme $f$ de $\Omega$ sobre $U$. A su vez cada una de las funciones
+$f_{i}$ es la composición de dos transformaciones bilineales y una
+raíz cuadrada. La demostración este teorema hace uso del hecho que
+toda función analítica que no se anula en $\Omega$ admite una función
+raíz cuadrada también análitica en $\Omega$.
 
-Construimos una transformaci\'{o}n biyectiva conforme que convierte regiones 
-$\Omega $ simplemente convexas del plano (distintas del mismo plano) en el c%
-\'{\i}rculo unitario abierto $U$, y rec\'{\i}procamente. En este trabajo
-consideramos dominios incluidos en el c\'{\i}rculo unitario que contienen el
-origen y cuya frontera corta solamente una vez los rayos desde el origen.
-Para ello usamos el esquema de la demostraci\'{o}n del Teorema de Riemann
-para transformaciones conformes, realizada por Koebe, que consiste en la
-construcci\'{o}n iterativa de regiones $\Omega _{1},$$\Omega _{2},\dots $, a
-partir de la regi\'{o}n $\Omega _{0}=\Omega \subset U$, generadas por una
-sucesi\'{o}n de funciones $f_{1},f_{2},\dots $, de modo que $f_{i}\left(
-\Omega _{i-1}\right) =\Omega _{i}$, y $f_{n}\circ f_{n-1}\circ \cdots \circ
-f_{1}$ converja a una transformaci\'{o}n conforme $f$ de $\Omega $ sobre $U$%
-. A su vez cada una de las funciones $f_{i}$ es la composici\'{o}n de dos
-transformaciones bilineales y una raiz cuadrada. La demostraci\'{o}n este
-teorema hace uso del hecho que toda funci\'{o}n anal\'{\i}tica que no se
-anula en $\Omega $ admite una funci\'{o}n ra\'{\i}z cuadrada tambi\'{e}n an%
-\'{a}litica en $\Omega $.
+Planteamos una rotación al semiplano de la derecha que nos permite
+aplicar luego una raíz cuadrada analítica, y lograr así un homeomorfismo
+entre cualquier región propia del plano, simplemente conexa, y el
+disco unitario abierto, como observamos en la figura 1 para dominios
+convexos y en la figura 2 para dominios cóncavos.
 
-Planteamos una rotaci\'{o}n al semiplano de la derecha que nos permite
-aplicar luego una raiz cuadrada anal\'{\i}tica, y lograr as\'{\i} un
-homeomorfismo entre cualquier regi\'{o}n propia del plano, simplemente
-conexa, y el disco unitario abierto, como obsevamos en la figura 1 para
-dominios convexos y en la figura 2 para dominios c\'{o}ncavos.%
-\[
-\FRAME{itbpFU}{3.5172in}{0.9219in}{0in}{\Qcb{{\protect\small Figura 1}}}{}{%
-figura1.jpg}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "F";width
-3.5172in;height 0.9219in;depth 0in;original-width 3.896in;original-height
-0.9997in;cropleft "0";croptop "1";cropright "1";cropbottom "0";filename
-'figura1.jpg';file-properties "XNPEU";}}
-\]%
-\[
-\FRAME{itbpFU}{3.4869in}{0.8916in}{0in}{\Qcb{{\protect\small Figura 2}}}{}{%
-figura2.jpg}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "F";width
-3.4869in;height 0.8916in;depth 0in;original-width 4.0309in;original-height
-1.0101in;cropleft "0";croptop "1";cropright "1";cropbottom "0";filename
-'figura2.jpg';file-properties "XNPEU";}}
-\]
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8cm]{convexo}
+\par\end{centering}
 
-Elaboramos un paquete inform\'{a}tico que construye cada una de las $f_{i}$,
-las aplica a la frontera de $\Omega _{i-1}$ y obtiene la frontera de $\Omega
-_{i}$. Una vez concluida esta tarea, usando la transformaci\'{o}n inversa,
-que tambi\'{e}n ser\'{a} conforme, podemos conseguir una transformaci\'{o}n
-de $U$ sobre $\Omega $.
+\begin{centering}
+\caption{Dominio Convexo}
 
-\begin{thebibliography}{9}
-\bibitem{1} EG\"{U}EZ C., S\'{A}NGARI A., Aplicaci\'{o}n del algoritmo de
-Koebe a regiones simplemente conexas, Comunicaciones Cient\'{\i}ficas. UMA
-2010.
+\par\end{centering}
+
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8cm]{concavo1}
+\par\end{centering}
+
+\caption{Dominio Cóncavo}
+
+
+\end{figure}
+
+
+Elaboramos un paquete informático que construye cada una de las $f_{i}$,
+las aplica a la frontera de $\Omega_{i-1}$ y obtiene la frontera
+de $\Omega_{i}$. Una vez concluida esta tarea, usando la transformación
+inversa, que también será conforme, podemos conseguir una transformación
+de $U$ sobre $\Omega$.
+\begin{thebibliography}{1}
+\bibitem{1} EGÜEZ C., SÁNGARI A., Aplicación del algoritmo de Koebe
+a regiones simplemente conexas, Comunicaciones Científicas. UMA 2010.
 
 \bibitem{2} HILBERT D. and COHN-VOSEN S., Geometry and the Imagination,
 Chelsea Publishing Company New York, 1990.
 
-\bibitem{3} NEVANLINNA R., PAATERO V, Introduction to complex analysis (AW,
-1969)
+\bibitem{3} NEVANLINNA R., PAATERO V, Introduction to complex analysis.
+Addison Wesley Publishing Company, 1969.
 
-\bibitem{4} RUDIN W., Real and Complex Analysis, McGraw-Hill, 1992.
-\end{thebibliography}
+\bibitem{4} RUDIN W., Real and Complex Analysis, McGraw-Hill, 1992. \end{thebibliography}
 
 \end{document}
